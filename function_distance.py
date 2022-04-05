@@ -6,7 +6,7 @@ def low(distance):
         return 1
     elif c <= distance < d:
         return (d - distance) / (d - c)
-    else: # 굳이 안해줘도 되긴 하는데 의미 적으로 
+    else:
         return 0
 
 def middle(distance):
@@ -21,8 +21,11 @@ def middle(distance):
         return (distance - a) / (b - a)
     elif b <= distance < c:
         return 1
-    else:
+    elif c <= distance < d:
         return (d - distance) / (d - c)
+    else:
+        return 0
+        
 
 def high(distance):
     a = 90
