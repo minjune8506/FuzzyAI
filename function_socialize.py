@@ -1,14 +1,23 @@
+from function_getDegreesOfMembership import getDegreesOfMembership
 def very_low(premise):
-    return premise * 10
+    return getDegreesOfMembership(-1 , -1 , 5 , 20 , premise)
 
 def low(premise):
-    return premise * 30
+    return getDegreesOfMembership(5 , 20 , 30 , 45 , premise)
 
-def middel(premise):
-    return premise * 50
+def middle(premise):
+    return getDegreesOfMembership(30 , 45 , 55 , 70 , premise)
 
 def high(premise):
-    return premise * 70
+    return getDegreesOfMembership(55 , 70 , 80 , 95 , premise)
 
 def very_high(premise):
-    return premise * 90
+    return getDegreesOfMembership(80 , 95 , -1 , -1 , premise)
+
+premise = float(input())
+
+print("veryLow : " + str(very_low(premise)))
+print("low : " + str(low(premise)))
+print("middle : " + str(middle(premise)))
+print("high : " + str(high(premise)))
+print("veryhigh : " + str(very_high(premise)))
