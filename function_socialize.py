@@ -1,45 +1,18 @@
+from function_getDegreesOfMembership import getDegreesOfMembership
 def very_low(premise):
-    c = 5
-    d = 20
-
-    if premise < c:
-        return 1
-    elif c <= premise < d:
-        return (d - premise) / (d - c)
-    else:
-        return 0
+    return getDegreesOfMembership(-1 , -1 , 5 , 20 , premise)
 
 def low(premise):
-    return all_parameter_calculate(5 , 20 , 30 , 45 , premise)
+    return getDegreesOfMembership(5 , 20 , 30 , 45 , premise)
 
 def middle(premise):
-    return all_parameter_calculate(30 , 45 , 55 , 70 , premise)
+    return getDegreesOfMembership(30 , 45 , 55 , 70 , premise)
 
 def high(premise):
-    return all_parameter_calculate(55 , 70 , 80 , 95 , premise)
+    return getDegreesOfMembership(55 , 70 , 80 , 95 , premise)
 
 def very_high(premise):
-    a = 80
-    b = 95
-
-    if premise < a:
-        return 0
-    elif a <= premise < b:
-        return (premise - a) / (b - a)
-    else:
-        return 1
-
-def all_parameter_calculate(a , b , c , d , premise):
-    if premise < a:
-        return 0
-    elif a <= premise < b:
-        return (premise - a) / (b - a)
-    elif b <= premise < c:
-        return 1
-    elif c <= premise < d:
-        return (d - premise) / (d - c)
-    else:
-        return 0
+    return getDegreesOfMembership(80 , 95 , -1 , -1 , premise)
 
 premise = float(input())
 
