@@ -1,6 +1,7 @@
-from function_getDegreesOfMembership import getDegreesOfMembership
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-# 이거 사실 필요 없는 메소드였음
+from function_getDegreesOfMembership import getDegreesOfMembership
 
 def very_low(premise):
     return getDegreesOfMembership(-1 , -1 , 5 , 20 , premise)
@@ -17,6 +18,7 @@ def high(premise):
 def very_high(premise):
     return getDegreesOfMembership(80 , 95 , -1 , -1 , premise)
 
+
 # a 와 b 사이의 접점 (value == 접점의 x 값) value = premise * b - premise * a + a
 # c 와 d 사이의 접점 (value == 접점의 x 값) value = premise * c - premise * d + d
 def very_low_area(premise):
@@ -24,9 +26,9 @@ def very_low_area(premise):
     d = 20
     
     x1 = premise * c - premise * d + d
+    div = float(2) # 실수형 나눗셈을 진행하기 위한 div
 
-    # 사실 안묶어도 되는데 가독성을 위해서
-    return (premise * x1) + ((x1 * d * premise) / 2)
+    return (premise * x1) + ((x1 * d * premise) / div)
 
 def low_area(premise):
     a = 5
@@ -36,8 +38,9 @@ def low_area(premise):
 
     x1 = premise * b - premise * a + a
     x2 = premise * c - premise * d + d
+    div = float(2)
 
-    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+    return ((x1 - a) * premise / div) + ((x2 - x1) * premise) + ((d - x2) * premise / div)
 
 def middle_area(premise):
     a = 30
@@ -47,8 +50,9 @@ def middle_area(premise):
 
     x1 = premise * b - premise * a + a
     x2 = premise * c - premise * d + d
+    div = float(2)
 
-    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+    return ((x1 - a) * premise / div) + ((x2 - x1) * premise) + ((d - x2) * premise / div)
 
 def high_area(premise):
     a = 55
@@ -58,8 +62,9 @@ def high_area(premise):
 
     x1 = premise * b - premise * a + a
     x2 = premise * c - premise * d + d
+    div = float(2)
 
-    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+    return ((x1 - a) * premise / div) + ((x2 - x1) * premise) + ((d - x2) * premise / div)
 
 
 def very_high_area(premise):
@@ -67,16 +72,17 @@ def very_high_area(premise):
     b = 95
 
     x1 = premise * b - premise * a + a
+    div = float(2)
 
-    return (x1 - a * premise / 2) + ((100 - x1) * premise)
+    return ((x1 - a) * premise / div) + ((100 - x1) * premise)
 
 
 
 
-premise = float(input())
+# premise = float(input())
 
-print("veryLow : " + str(very_low(premise)))
-print("low : " + str(low(premise)))
-print("middle : " + str(middle(premise)))
-print("high : " + str(high(premise)))
-print("veryhigh : " + str(very_high(premise)))
+# print("veryLow : " + str(very_low(premise)))
+# print("low : " + str(low(premise)))
+# print("middle : " + str(middle(premise)))
+# print("high : " + str(high(premise)))
+# print("veryhigh : " + str(very_high(premise)))

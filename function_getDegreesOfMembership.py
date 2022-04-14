@@ -1,4 +1,7 @@
-def getDegreesOfMembership(a , b , c , d , value): #  
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+def getDegreesOfMembership(a , b , c , d , value): 
     if(a < 0 and b < 0 and c >= 0 and d >= 0):
         if value < c:
             return 1
@@ -7,7 +10,7 @@ def getDegreesOfMembership(a , b , c , d , value): #
         else:
             return 0
 
-    if a >= 0 and b >= 0 and c >= 0 and d >= 0: # a , b , c , d 가 모두 있는 완벽한 사다리꼴의 경우
+    if a >= 0 and b >= 0 and c >= 0 and d >= 0:
         if value < a:
             return 0
         elif a <= value < b:

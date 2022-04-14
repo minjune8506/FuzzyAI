@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import matplotlib.pyplot as plt
 
 plt.rc('font', family='D2Coding') # For MacOS
