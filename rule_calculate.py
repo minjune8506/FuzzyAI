@@ -16,7 +16,7 @@ def rule_1(distance , answer , count):
     print(function_distance.low(distance))
     print(function_answer.low(answer))
     print(function_count.low(count))
-    
+
     return function_socialize.middle_area(min(function_distance.low(distance) , 
     function_answer.low(answer) , function_count.low(count)))
 

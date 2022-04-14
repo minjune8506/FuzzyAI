@@ -28,7 +28,7 @@ def very_low_area(premise):
     x1 = premise * c - premise * d + d
     div = float(2) # 실수형 나눗셈을 진행하기 위한 div
 
-    return (premise * x1) + ((x1 * d * premise) / div)
+    return (premise * x1) + (((d - x1) * premise) / div)
 
 def low_area(premise):
     a = 5
