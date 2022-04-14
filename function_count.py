@@ -1,15 +1,15 @@
 from function_getDegreesOfMembership import getDegreesOfMembership
 
 def low(count):
-    return getDegreesOfMembership(-1, -1, 5, 10, count)
+    return getDegreesOfMembership(-1, -1, -1, 10, count)
 
 
 def medium(count):
-    return getDegreesOfMembership(5, 10, 20, 25, count)
+    return getDegreesOfMembership(5, 10, 15, 20, count)
 
     
 def high(count):
-    return getDegreesOfMembership(20, 25, -1, -1, count)
+    return getDegreesOfMembership(15, 25, -1, -1, count)
 
 count = int(input("한달 동안 만나는 횟수(번)를 입력하시오 : "))
 
