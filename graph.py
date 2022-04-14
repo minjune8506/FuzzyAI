@@ -15,9 +15,9 @@ plt.grid(True)
 
 meetCount = plt.subplot(3, 2, 2) # index = 2
 plt.title('한달에 만나는 횟수(번)')
-plt.plot([0, 5, 10], [1, 1, 0], 'go-')
-plt.plot([5, 10, 20, 25], [0, 1, 1, 0], 'bo-')
-plt.plot([20, 25, 30], [0, 1, 1], 'ro-')
+plt.plot([0, 10], [1, 0], 'go-')
+plt.plot([5, 10, 15, 20], [0, 1, 1, 0], 'bo-')
+plt.plot([15, 25, 30], [0, 1, 1], 'ro-')
 plt.axis([0, 30, 0, 1.1])
 plt.grid(True)
 
