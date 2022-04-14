@@ -1,4 +1,7 @@
 from function_getDegreesOfMembership import getDegreesOfMembership
+
+# 이거 사실 필요 없는 메소드였음
+
 def very_low(premise):
     return getDegreesOfMembership(-1 , -1 , 5 , 20 , premise)
 
@@ -13,6 +16,62 @@ def high(premise):
 
 def very_high(premise):
     return getDegreesOfMembership(80 , 95 , -1 , -1 , premise)
+
+# a 와 b 사이의 접점 (value == 접점의 x 값) value = premise * b - premise * a + a
+# c 와 d 사이의 접점 (value == 접점의 x 값) value = premise * c - premise * d + d
+def very_low_area(premise):
+    c = 5
+    d = 20
+    
+    x1 = premise * c - premise * d + d
+
+    # 사실 안묶어도 되는데 가독성을 위해서
+    return (premise * x1) + ((x1 * d * premise) / 2)
+
+def low_area(premise):
+    a = 5
+    b = 20
+    c = 30
+    d = 45
+
+    x1 = premise * b - premise * a + a
+    x2 = premise * c - premise * d + d
+
+    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+
+def middle_area(premise):
+    a = 30
+    b = 45
+    c = 55
+    d = 70
+
+    x1 = premise * b - premise * a + a
+    x2 = premise * c - premise * d + d
+
+    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+
+def high_area(premise):
+    a = 55
+    b = 70
+    c = 80
+    d = 95
+
+    x1 = premise * b - premise * a + a
+    x2 = premise * c - premise * d + d
+
+    return ((x1 - a) * premise / 2) + ((x2 - x1) * premise) + (d - x2 * premise / 2)
+
+
+def very_high_area(premise):
+    a = 80
+    b = 95
+
+    x1 = premise * b - premise * a + a
+
+    return (x1 - a * premise / 2) + ((100 - x1) * premise)
+
+
+
 
 premise = float(input())
 

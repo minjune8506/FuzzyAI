@@ -3,7 +3,6 @@ from function_getDegreesOfMembership import getDegreesOfMembership
 def low(count):
     return getDegreesOfMembership(-1, -1, 5, 10, count)
 
-
 def medium(count):
     return getDegreesOfMembership(5, 10, 20, 25, count)
 
