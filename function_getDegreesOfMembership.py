@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def getDegreesOfMembership(a , b , c , d , value): 
-    if(a < 0 and b < 0 and c >= 0 and d >= 0):
+    if (a < 0 and b < 0 and c >= 0 and d >= 0):
         if value < c:
             return 1
         elif c <= value < d:
@@ -22,7 +22,7 @@ def getDegreesOfMembership(a , b , c , d , value):
         else:
             return 0
 
-    if(a >= 0 and b >= 0 and c < 0 and d < 0):
+    if (a >= 0 and b >= 0 and c < 0 and d < 0):
         if value < a:
             return 0
         elif a <= value < b:
