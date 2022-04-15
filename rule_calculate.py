@@ -79,7 +79,7 @@ def rule_6(distance, count):
     print("물음표 소속도 : %.1f" %function_count.middle(count))
     premise = min(function_distance.middle(distance), function_distance.middle(count))
     print("premise : %.1f" %premise)
-    return function_socialize.middle(premise)
+    return function_socialize.middle_area(premise)
 
 # Rule Number 7
 # 거리 high and 물음표 low then 확률 low
@@ -90,7 +90,7 @@ def rule_7(distance, question) :
     print("물음표 소속도 : %.1f" %function_question.low(question))
     premise = min(function_distance.high(distance), function_question.low(question))
     print("premise : %.1f" %premise)
-    return function_socialize.low(premise)
+    return function_socialize.low_area(premise)
 
 # Rule Number 8
 # 답장 low and 만남 medium then 확률 medium
@@ -101,7 +101,7 @@ def rule_8(answer, count) :
     print("만남 소속도 : %.1f" %(function_count.middle(count)))
     premise = min(function_answer.low(answer), function_count.middle(count))
     print("premise : %.1f" %premise)
-    return function_socialize.middle(premise)
+    return function_socialize.middle_area(premise)
 
 # Rule Number 9
 # 답장 high and 물음표 high then 확률은 medium
@@ -112,7 +112,7 @@ def rule_9(answer, question) :
     print("물음표 소속도 : %.1f" %(function_question.high(question)))
     premise = min(function_answer.high(answer), function_question.high(count))
     print("premise : %.1f" %premise)
-    return function_socialize.middle(premise)
+    return function_socialize.middle_area(premise)
 
 # Rule Number 10
 # 답장 high and 물음표 low then 확률 low.
@@ -123,7 +123,7 @@ def rule_10(answer, question) :
     print("물음표 소속도 : %.1f" %(function_question.low(question)))
     premise = min(function_answer.high(answer), function_question.low(count))
     print("premise : %.1f" %premise)
-    return function_socialize.low(premise)
+    return function_socialize.low_area(premise)
 
 #안 사귈수가 없어야 함
 distance = 15 # 거리 15분
