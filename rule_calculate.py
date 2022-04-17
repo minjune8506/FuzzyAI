@@ -173,8 +173,8 @@ def rule_15(answer, count, question):
     print("answer : %d분, count : %d번, question : %d번" %(answer, count, question))
     print("답장 소속도 : %.1f" %function_answer.low(answer))
     print("만남 소속도 : %.1f" %function_count.middle(count))
-    print("물음표 소속도 : %.1f" %function_question.medium(question))
-    premise = min(function_answer.low(answer), function_count.middle(count), function_question.medium(question))
+    print("물음표 소속도 : %.1f" %function_question.middle(question))
+    premise = min(function_answer.low(answer), function_count.middle(count), function_question.middle(question))
     print("premise : %.1f" %premise)
     return function_socialize.middle(premise)
 
@@ -183,9 +183,9 @@ def rule_15(answer, count, question):
 def rule_16(answer , question):
     print("rule_16")
     print("answer : %d분, question : %d번" %(answer, question))
-    print("답장 소속도 : %.1f" %function_answer.medium(answer))
+    print("답장 소속도 : %.1f" %function_answer.middle(answer))
     print("물음표 소속도 : %.1f" %function_question.low(question))
-    premise = min(function_answer.medium(answer) , function_question.low(question))
+    premise = min(function_answer.middle(answer) , function_question.low(question))
     print("premise : %.1f" %premise)
     return function_socialize.low(premise)
 
@@ -194,9 +194,9 @@ def rule_16(answer , question):
 def rule_17(question, count):
     print("rule_17")
     print("question : %d번, count : %d번" %(question, count))
-    print("물음표 소속도 : %.1f" %function_question.medium(question))
+    print("물음표 소속도 : %.1f" %function_question.middle(question))
     print("만남 소속도 : %.1f" %function_count.low(count))
-    premise = max(function_question.medium(question), function_distance.low(count))
+    premise = max(function_question.low(question), function_distance.low(count))
     print("premise : %.1f" %premise)
     return function_socialize.middle(premise)
 
@@ -228,7 +228,7 @@ def rule_20(count) :
     print("rule_20")
     print("count : %d번" %(count))
     print("만남 소속도 : %.1f" %(function_count.low(count)))
-    premise = min(function_count.low(count))
+    premise = function_count.low(count)
     print("premise : %.1f" %premise)
     return function_socialize.middle(premise)
 

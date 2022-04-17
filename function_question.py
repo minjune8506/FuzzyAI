@@ -6,7 +6,7 @@ from function_getDegreesOfMembership import getDegreesOfMembership
 def low(question):
     return getDegreesOfMembership(-1,-1,10,20,question)
 
-def medium(question):
+def middle(question):
     return getDegreesOfMembership(10,20,50,60,question)
 
 def high(question):
