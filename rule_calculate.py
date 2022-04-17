@@ -158,7 +158,7 @@ def rule_13(answer, question) :
 # Rule Number 14
 # 답장 high and 만남 high then 확률 high
 def rule_14(answer, count) :
-    print("rule_12")
+    print("rule_14")
     print("answer : %d분, count : %d번" %(answer, count))
     print("답장 소속도 : %.1f" %(func_answer.high(answer)))
     print("만남 소속도 : %.1f" %(func_count.high(count)))
