@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 답장이 오는데 걸리는 시간 (분)
-from function_getDegreesOfMembership import getDegreesOfMembership
+from func_getDegreesOfMembership import getDegreesOfMembership
 
 def low(answer):
     return getDegreesOfMembership(-1 , -1 , 10 , 40 , answer)
