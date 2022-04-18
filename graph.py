@@ -3,11 +3,11 @@
 
 import matplotlib.pyplot as plt
 
-plt.rc('font', family='D2Coding') # For MacOS
+plt.rc('font', family='D2Coding') # For MacOS Install D2Coding Font
 
 fig = plt.figure("Fuzzy AI")
 
-distance = plt.subplot(3, 2, 1) #nrows = 3, ncols = 2, index = 1
+distance = plt.subplot(3, 2, 1) # nrows = 3, ncols = 2, index = 1
 plt.title('상대방 집까지 걸리는 시간(분)')
 plt.plot([0, 15, 45], [1, 1, 0], 'go-')
 plt.plot([15, 45, 90, 120], [0, 1, 1, 0], 'bo-')
