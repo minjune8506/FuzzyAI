@@ -328,11 +328,11 @@ print(rule_20(count))
 
 sum = 0
 
-very_low = 0.3
-low = 0.5
-middle = 0.7
-high = 0.9
-very_high = 1.0
+very_low = 0.5
+low = 0.7
+middle = 0.9
+high = 0.3
+very_high = 0.2
 
 for i in numpy.arange(0.0 , 100.01 , 0.1):
     # very_low 
@@ -352,7 +352,7 @@ for i in numpy.arange(0.0 , 100.01 , 0.1):
 
     # 그래프 그리기
     plt.scatter(i , max(vl , l , m , h , vh) , c ='black' , edgecolor = 'black' , s = 10)
-    
+
     sum += max(vl , l , m , h , vh) * 0.1
 
 plt.show() # 그래프 표시
