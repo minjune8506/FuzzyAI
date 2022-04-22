@@ -100,17 +100,18 @@ def rule_11(count , answer):
     very_high = max(very_high, premise)
 
 def getPremise(distance, answer, count, question) :
-    rule_1(distance , count , question , answer)
-    rule_2(distance , count , question , answer)
+    rule_0(question, answer)
+    rule_1(distance, count, question, answer)
+    rule_2(distance, count, question, answer)
     rule_3(distance, question)
     rule_4(count, answer)
-    rule_5(distance , answer , count)
+    rule_5(distance, answer, count)
     rule_6(answer, count, question)
-    rule_7(answer , question ,distance)
-    rule_8(answer, count , distance)
-    rule_9(distance , count , answer , question)
-    rule_10(distance , count , answer , question)
-    rule_11(count , answer)
+    rule_7(answer, question, distance)
+    rule_8(answer, count, distance)
+    rule_9(distance, count, answer, question)
+    rule_10(distance, count, answer, question)
+    rule_11(count, answer)
 
 def getCOG() :
 	sum = 0
