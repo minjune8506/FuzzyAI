@@ -44,7 +44,7 @@ plt.grid(True)
 
 
 graph5 = plt.subplot(3, 2, 5) # index = 5
-plt.title('사귀 확률 (%)')
+plt.title('사귈 확률 (%)')
 plt.plot([0, 5, 20], [1, 1, 0], 'go-')
 plt.plot([5, 20, 30, 45], [0, 1, 1, 0], 'bo-')
 plt.plot([30, 45, 55, 70], [0, 1, 1, 0], 'ro-')
